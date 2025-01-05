@@ -19,5 +19,10 @@ This is the source code used for the Maven project, which is used for testing Ha
 3. If successful, you should see a build success message:
 
     ```bash
-    
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    [INFO] Total time:  36.095 s
+    [INFO] Finished at: 2025-01-05T17:03:43+08:00
+    [INFO] ------------------------------------------------------------------------
     ```
