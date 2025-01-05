@@ -11,8 +11,8 @@
     </developers>
 
     <groupId>com.testmavenproject</groupId>
-    <artifactId>eswithmr</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>testmavenproject</artifactId>
+    <version>testmavenproject</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
