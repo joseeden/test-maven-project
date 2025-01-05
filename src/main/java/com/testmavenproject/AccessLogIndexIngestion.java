@@ -46,7 +46,14 @@ public class AccessLogIndexIngestion {
         Configuration conf = new Configuration();
         conf.setBoolean("mapred.map.tasks.speculative.execution", false);
         conf.setBoolean("mapred.reduce.tasks.speculative.execution", false);
-        conf.set("es.nodes", "192.168.56.101:9200");
+        conf.set("es.nodes", "192.168.56.101:9200");  // Change to HTTPS in configuration
+        conf.set("es.net.ssl", "true");  // Enable SSL
+        conf.set("es.net.ssl.cert.allow.self.signed", "true");  // Allow self-signed certs, if applicable
+        conf.set("es.net.http.auth.user", "your_username");  // Set the username
+        conf.set("es.net.http.auth.pass", "your_password");  // Set the password
+        conf.set("es.net.ssl.cert.allow.self.signed", "true");  // Allow self-signed certificates
+        conf.set("es.net.ssl.truststore.location", "path_to_truststore");  // Specify the path to the truststore
+        conf.set("es.net.ssl.truststore.password", "truststore_password");  // Truststore password
         conf.set("es.resource", "logs");
 
         Job job = Job.getInstance(conf);
