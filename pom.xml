@@ -10,8 +10,8 @@
         </developer>
     </developers>
 
-    <groupId>com.test-maven-project</groupId>
-    <artifactId>test-maven-project</artifactId>
+    <groupId>com.testmavenproject</groupId>
+    <artifactId>testmavenproject</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -34,11 +34,18 @@
             <artifactId>elasticsearch-hadoop-mr</artifactId>
             <version>8.17.0</version>
         </dependency>
-        
+
         <dependency>
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
+        </dependency>
+
+        <!-- Dependency for Hadoop MapReduce API -->
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-core</artifactId>
+            <version>3.4.1</version>
         </dependency>
     </dependencies>
 
@@ -69,7 +76,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <Main-Class>com.coralogix.AccessLogIndexIngestion</Main-Class>
+                                        <Main-Class>com.testmavenproject.AccessLogIndexIngestion</Main-Class>
                                         <Build-Number>123</Build-Number>
                                     </manifestEntries>
                                 </transformer>
